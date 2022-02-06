@@ -9,12 +9,11 @@ pipeline {
                 """
             }
         }
-        stage('test_parameter') {
+        stage('test') {
           steps {
               script {
-              input message: 'enter region', parameters: [string(defaultValue: 'us-east-1', name: 'region')]
               sh """
-              cat Jenkinsfile
+              mvn clean verify sonar:sonar
               """
               }
          }
