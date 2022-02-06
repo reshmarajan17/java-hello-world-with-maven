@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'which mvn'
+                sh """
+                which mvn
+                """
             }
         }
         stage('test_parameter') {
