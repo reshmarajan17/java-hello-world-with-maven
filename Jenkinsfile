@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo "test"'
+                sh 'mvn compile package'
             }
         }
         stage('test_parameter') {
