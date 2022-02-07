@@ -1,4 +1,10 @@
-settings>
+<settings>
+    <server>
+            <id>test-maven-poc</id>
+            <username>admin</username>
+            <password>Rohith@123</password>
+    </server>
+  </servers>
     <pluginGroups>
         <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
     </pluginGroups>
