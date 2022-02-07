@@ -36,16 +36,16 @@ pipeline {
                             nexusVersion: NEXUS_VERSION,
                             protocol: NEXUS_PROTOCOL,
                             nexusUrl: NEXUS_URL,
-                            groupId: org.springframework,
+                            groupId: "org.springframework",
                             version: "0.1.0",
                             repository: NEXUS_REPOSITORY,
                             credentialsId: NEXUS_CREDENTIAL_ID,
                             artifacts: [
                                 // Artifact generated such as .jar, .ear and .war files.
-                                [artifactId: jb-hello-world-maven,
+                                [artifactId: "jb-hello-world-maven",
                                 classifier: '',
-                                file: test-maven-poc/org/springframework/jb-hello-world-maven/0.1.0/jb-hello-world-maven-0.1.0.jar.,
-                                type: jar],
+                                file: "test-maven-poc/org/springframework/jb-hello-world-maven/0.1.0/jb-hello-world-maven-0.1.0.jar.",
+                                type: "jar"],
 
                                 // Lets upload the pom.xml file for additional information for Transitive dependencies
                                 [artifactId: pom.artifactId,
