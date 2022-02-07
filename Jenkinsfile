@@ -15,6 +15,7 @@ pipeline {
               sh 'mvn verify sonar:sonar -Dsonar.projectKey=poc_deployment'
               } 
           }
+        }
         stage('nexus') {
           steps {
               sh 'mvn deploy'
@@ -22,4 +23,3 @@ pipeline {
          }
        }
     }
-}
